@@ -16,7 +16,11 @@ var orm = {
         });
     },
     updateOne: function(name) {
-        var queryStr = "UPDATE rocks SET ? "
+        var queryStr = "UPDATE rocks SET ? ";
+        con.query(queryStr, name, function(err, result) {
+            if (err) throw err;
+            console.log(result);
+        })
     } 
 }
 
