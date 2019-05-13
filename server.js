@@ -20,12 +20,10 @@ var con = mysql.createConnection({
     database: "wheelbarrow_db"
 })
 
-con.connect(function(err) {
-    if (err) {
-        console.error("error connecting: " + err.stack);
-        return;
-    }
+var routes = require("./controllers/wheelbarrow_controllers.js");
 
-    console.log("connected as " + con.threadId);
+app.use(routes);
+
+app.listen(PORT, function() {
+    console.log("server listening on: http://localhost:" + PORT);
 });
-
