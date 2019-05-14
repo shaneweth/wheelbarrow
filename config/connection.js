@@ -1,6 +1,6 @@
 var mysql = require("mysql");
 
-var con = mysql.createConnection({
+var conn = mysql.createConnection({
     host: "localhost",
     port: 8889,
     user: "root",
@@ -8,12 +8,12 @@ var con = mysql.createConnection({
     database: "wheelbarrow_db"
 });
 
-con.connect(function(err) {
+conn.connect(function(err) {
     if (err) {
         console.error("error connecting: " + err.stack);
         return;
     }
-    console.log("connected as id " + con.threadId);
+    console.log("connected as id " + conn.threadId);
 });
 
-module.exports = con;
+module.exports = conn;
