@@ -29,16 +29,16 @@ var rock = require('../models/wheelbarrow.js');
 // Create the routes and associated logic
 router.get('/', function(req, res) {
   rock.selectAll(function(data) {
-    var hbsObject = {
+    var hbObj = {
       rocks: data
     };
-    // console.log(hbsObject);
-    res.render('index', hbsObject);
+    // console.log(hbObj);
+    res.render('index', hbObj);
   });
 });
 
 router.post('/rocks', function(req, res) {
-  burger.insertOne([
+  rock.insertOne([
     'rock_name'
   ], [
     req.body.rock_name
@@ -51,7 +51,7 @@ router.put('/rocks/:id', function(req, res) {
   var condition = 'id = ' + req.params.id;
 
   rock.updateOne({
-    devoured: true
+    in_bucket: true
   }, condition, function(data) {
     res.redirect('/');
   });
