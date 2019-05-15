@@ -2,8 +2,13 @@
 <html lang="en">
 	<head>
 		<title>wheelbarrow!</title>
+		{{#each css}}
+			<link rel="stylesheet" href="../../public/assets/css/style.css">
+		{{/each}}
 	</head>
 	<body>
 		{{{ body }}}
+		{{#each js}}
+			<script src="../../models/wheelbarrow.js"></script>
 	</body>
 </html>
