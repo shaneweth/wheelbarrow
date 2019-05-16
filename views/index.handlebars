@@ -1,7 +1,7 @@
 <div class="grid-container">
     <header class="header">
         <h1>Rock In The Bucket</h1>
-        <h2>better than burgers!</h2>
+        <h2>***better than burgers***</h2>
 
     </header>
     <sidebar class="sidebar">
@@ -18,9 +18,17 @@
 
     <main class="main">
 
+        <h2>Add Your Favorite Rock</h2>
+
+        <form action="/rocks" method="POST">
+            <input type="text" id="name" name="rock_name" placeholder="Fancy Fancy Rocks!!">
+            <button type="submit" class="addRockType">~Add Rock~</button>
+        </form>
+
         {{#each rocks}}
         {{#if this.in_bucket}}
         <div class='rockBucket'>
+            <h2>In the Bucket!</h2>
             <div>
                 {{this.rock_name}}
             </div>
@@ -28,13 +36,7 @@
         {{/if}}
         {{/each}}
 
-        <h2>Add Your Favorite Rock</h2>
 
-
-        <form action="/rocks" method="POST">
-            <input type="text" id="name" name="rock_name" placeholder="Fancy Fancy Rocks!!">
-            <button type="submit" class="addRockType">Add Your Rock Here!</button>
-        </form>
 
     </main>
 

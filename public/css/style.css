@@ -15,8 +15,8 @@ body {
     min-height: 100%;
     grid-template:
         " header header "
-        " main sidebar "
-        " main sidebar ";
+        " sidebar main "
+        " sidebar main ";
     grid-template-columns: auto auto;
     grid-gap: .3em;
     padding: .3em;
@@ -28,10 +28,10 @@ body {
 
 header {
     grid-area: header;
-    font-size: 1rem;
     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgba(3, 164, 218, 0.856);
+    -webkit-text-stroke-color: rgba(25, 104, 131, 0.76);
+    
 }
 
 .sidebar {
@@ -45,7 +45,8 @@ header {
     border: solid red 2px;
     text-align: center;
     font-family: 'Spectral', serif;
-    font-size: 5rem;
+    font-size: 4vw;
+    padding-top: 4rem;
     height: 40vh;
     background-image: url("../img/thor_korg.0.jpg");
     background-repeat: no-repeat;
@@ -67,12 +68,13 @@ header {
     color: red;
     width: 5vw;
     height: 10vh;
-    margin: .5em;
+    margin: 1rem auto auto 5rem;
     font-size: 3.5rem;
     border-radius: .3em;
     border: outset .2em rgba(0, 105, 0, 0.548);
     opacity: .6;
     transition: .3s;
+
 }
 
 .sidebar button:hover {
@@ -84,8 +86,7 @@ header {
 .rockAvail {
     background-image: url("../img/rockbutton.png");
     background-size: cover;
-    padding: 1em;
-    display: inline-flex;
+    padding: 1rem 0 0 2rem;
 }
 
 main {
@@ -93,23 +94,29 @@ main {
     background-image: url("../img/rebucket.jpeg");
     background-size: contain;
     padding: 1em;
-    text-align: right;
 }
 
 .rockBucket {
     font-family: 'Fredericka the Great', cursive;
     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: rgba(51, 51, 51, 0.815);
     width: 8vw;
     height: 5vh;
     margin: .5em;
-    font-size: 3.5rem;
+    font-size: 3rem;
     border-radius: .3em;
-    border: outset .2em rgba(0, 105, 0, 0.548);
+    border: outset .2em rgba(30, 49, 30, 0.548);
     background-color: whitesmoke;
     background-size: cover;
 }
+
+.rockBucket h2 {
+    font-family: 'Spectral', serif;
+    font-size: 1rem;
+    color: rgba(63, 62, 62, 0.664);
+}
+
 #name {
     height: 3vh;
     width: 10vw;
