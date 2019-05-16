@@ -10,19 +10,6 @@ body {
 
 }
 
-
-header {
-    grid-area: header;
-}
-
-.sidebar {
-    grid-area: sidebar;
-}
-
-main {
-    grid-area: main;
-}
-
 .grid-container {
     display: grid;
     min-height: 100%;
@@ -40,8 +27,25 @@ main {
 }
 
 header {
+    grid-area: header;
+    font-size: 1rem;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(3, 164, 218, 0.856);
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+main {
+    grid-area: main;
+}
+header {
     border: solid red 2px;
     text-align: center;
+    font-family: 'Spectral', serif;
+    font-size: 5rem;
     height: 40vh;
     background-image: url("../img/thor_korg.0.jpg");
     background-repeat: no-repeat;
@@ -81,23 +85,47 @@ header {
     background-image: url("../img/rockbutton.png");
     background-size: cover;
     padding: 1em;
+    display: inline-flex;
 }
 
 main {
     border: solid green 2px;
     background-image: url("../img/rebucket.jpeg");
-    background-repeat: no-repeat;
     background-size: contain;
     padding: 1em;
     text-align: right;
 }
 
 .rockBucket {
-    border: rgba(73, 23, 23, 0.555) 3px ridge;
-    background-color: firebrick;
-    color: whitesmoke;
-    width: 10%;
-    text-align: center;
-    font-size: 1rem;
-    border-radius: 20%;
+    font-family: 'Fredericka the Great', cursive;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    width: 8vw;
+    height: 5vh;
+    margin: .5em;
+    font-size: 3.5rem;
+    border-radius: .3em;
+    border: outset .2em rgba(0, 105, 0, 0.548);
+    background-color: whitesmoke;
+    background-size: cover;
+}
+#name {
+    height: 3vh;
+    width: 10vw;
+    border: 3px rgba(95, 93, 93, 0.637) ridge;
+}
+.addRockType {
+    border-radius: 100%;
+    background-color: skyblue;
+    border: .8em rgba(151, 36, 36, 0.699) groove;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: rgb(70, 70, 70);
+    height: 5vh;
+    width: 5vw;
+}
+
+.addRockType:hover {
+    cursor: pointer;
 }
