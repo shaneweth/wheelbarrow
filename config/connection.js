@@ -2,6 +2,7 @@
 // Pull in required dependencies
 var mysql = require('mysql');
 
+
 // Create the MySQL connection object
 var connection;
 
@@ -18,6 +19,7 @@ if (process.env.JAWSDB_URL) {
 		database: 'wheelbarrow_db'
 	})
 };
+
 
 // Make the connection to MySQL
 connection.connect(function(err) {
