@@ -1,6 +1,9 @@
-<h1>Throw the Rock in the Bucket!!</h1>
 
 <div class="grid-container">
+    <header class="header">
+        <h1>Throw the Rock in the Bucket!!</h1>
+
+    </header>
     <sidebar class="sidebar">
         {{#each rocks}}
         {{#unless this.in_bucket}}
@@ -26,14 +29,10 @@
 
         <h2>Add Your Favorite Rock</h2>
 
-        <div class="row">
-            <div class="col s12">
                 <form action="/rocks" method="POST">
                     <input type="text" id="name" name="rock_name" placeholder="Fancy Fancy Rocks!!">
                     <button type="submit" class="addRockType">Add the Rock Right Here!</button>
                 </form>
-            </div>
-        </div>
 
     </main>
 

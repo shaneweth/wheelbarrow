@@ -6,6 +6,8 @@
 body {
     margin: 0;
     height: 100%;
+    font-family: 'Rock Salt', cursive;
+
 }
 
 
@@ -31,10 +33,13 @@ main { grid-area: main; }
 
 header {
     border: solid red 2px;
+    text-align: center;
 }
 
 .sidebar {
     border: solid skyblue 2px;
+    background-image: url("../img/wheelbarrow.jpg");
+    background-size: contain;
 
 }
 
