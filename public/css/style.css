@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
@@ -11,38 +11,93 @@ body {
 }
 
 
-header { grid-area: header; }
-.sidebar { grid-area: sidebar; }
-main { grid-area: main; }
+header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+main {
+    grid-area: main;
+}
 
 .grid-container {
     display: grid;
     min-height: 100%;
-    grid-template: 
-                    ". header header ."
-                    "main main main sidebar"
-                    "main main main sidebar";
-    grid-template-columns: auto auto auto auto;
+    grid-template:
+        " header header "
+        " main sidebar "
+        " main sidebar ";
+    grid-template-columns: auto auto;
     grid-gap: .3em;
     padding: .3em;
 }
 
-.grid-container > div {
+.grid-container>div {
     font-size: 1em;
 }
 
 header {
     border: solid red 2px;
     text-align: center;
+    height: 40vh;
+    background-image: url("../img/thor_korg.0.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .sidebar {
-    border: solid skyblue 2px;
+    border: outset deepskyblue 2px;
+    padding: 1em;
     background-image: url("../img/wheelbarrow.jpg");
     background-size: contain;
+    background-repeat: no-repeat;
 
+}
+
+.sidebar button {
+    font-family: 'Fredericka the Great', cursive;
+    color: red;
+    width: 5vw;
+    height: 10vh;
+    margin: .5em;
+    font-size: 3.5rem;
+    border-radius: .3em;
+    border: outset .2em rgba(0, 105, 0, 0.548);
+    opacity: .6;
+    transition: .3s;
+}
+
+.sidebar button:hover {
+    cursor: pointer;
+    opacity: 1;
+    transition: .5s;
+}
+
+.rockAvail {
+    background-image: url("../img/rockbutton.png");
+    background-size: cover;
+    padding: 1em;
 }
 
 main {
     border: solid green 2px;
+    background-image: url("../img/rebucket.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 1em;
+    text-align: right;
+}
+
+.rockBucket {
+    border: rgba(73, 23, 23, 0.555) 3px ridge;
+    background-color: firebrick;
+    color: whitesmoke;
+    width: 10%;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 20%;
 }
