@@ -25,10 +25,11 @@
             <button type="submit" class="addRockType">~Add Rock~</button>
         </form>
 
+        <h2>In the Bucket!</h2>
+
         {{#each rocks}}
         {{#if this.in_bucket}}
         <div class='rockBucket'>
-            <h2>In the Bucket!</h2>
             <div>
                 {{this.rock_name}}
             </div>
